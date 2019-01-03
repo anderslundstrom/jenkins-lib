@@ -130,7 +130,7 @@ String getBJVersion(version_base) {
     return "${version_base[0]}.${version_base[1]}.${version_last + 1}"
 }
 
-static String getMRVersion(version_base, branchName, currentBuild) {
+String getMRVersion(version_base, branchName, currentBuild) {
     def buildNumber = currentBuild.number
     def bjVersion = getBJVersion(version_base)
     return "${bjVersion}-beta-${branchName}-${buildNumber}"
